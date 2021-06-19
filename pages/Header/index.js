@@ -2,13 +2,10 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Avatar from '@material-ui/core/Avatar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
-import isMobile from 'is-mobile';
 import PhoneIphone from '@material-ui/icons/PhoneIphone';
 import Email from '@material-ui/icons/Email';
-import ScrollTop from './ScrollTop';
 import styles from '../../styles/Home.module.css';
 import TouristSpots from '../Views/TouristSpots';
 
@@ -57,11 +54,6 @@ export default function BackToTop(props) {
 					<TouristSpots />
 				</Box>
 			</Container>
-			{/* <ScrollTop {...props}>
-				<Fab color='secondary' size='small' aria-label='scroll back to top'>
-					<KeyboardArrowUpIcon />
-				</Fab>
-			</ScrollTop> */}
 		</div>
 	);
 }

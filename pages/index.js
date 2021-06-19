@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Container from '@material-ui/core/Container';
 import Header from './Header';
 import Footer from './Footer';
-
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
