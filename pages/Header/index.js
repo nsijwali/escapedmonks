@@ -47,8 +47,8 @@ export default function BackToTop(props) {
 					</div>
 				</Toolbar>
 			</AppBar>
-			<Toolbar id='back-to-top-anchor' />
-			<Box my={10} />
+			{/* <Toolbar id='back-to-top-anchor' /> */}
+			{/* <Box my={10} /> */}
 			<Container>
 				<Box my={2}>
 					<TouristSpots />

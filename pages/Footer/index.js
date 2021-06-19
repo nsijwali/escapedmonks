@@ -1,5 +1,4 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import Facebook from '@material-ui/icons/Facebook';
@@ -8,17 +7,7 @@ import Youtube from '@material-ui/icons/YouTube';
 import WhatsApp from '@material-ui/icons/WhatsApp';
 import styles from '../../styles/Home.module.css';
 
-const useStyles = makeStyles({
-	root: {
-		width: '50rem',
-		backgroundColor: '#424242',
-		position: 'fixed !important',
-		bottom: 10,
-	},
-});
-
 const Footer = () => {
-	const classes = useStyles();
 	const [value, setValue] = React.useState('recents');
 
 	const handleChange = (event, newValue) => {

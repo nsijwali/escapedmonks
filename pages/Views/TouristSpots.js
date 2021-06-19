@@ -8,43 +8,85 @@ import Button from '@material-ui/core/Button';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
-import logo from '../../public/assets/logo.png';
-import escapedmonk from '../../public/assets/escapedmonk.png';
+import { autoPlay, bindKeyboard } from 'react-swipeable-views-utils';
+import kedarnathDham from '../../public/assets/kedarnath_dham.jpeg';
+import KasolValley from '../../public/assets/kasol_valley.jpeg';
+import Chopta from '../../public/assets/chopta_tunganath.jpeg';
+import Tuganath from '../../public/assets/tunganath.jpeg';
+import Solang from '../../public/assets/solang_valley.jpeg';
+import styles from '../../styles/Home.module.css';
 
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+const AutoPlaySwipeableViews = bindKeyboard(autoPlay(SwipeableViews));
 
 const tutorialSteps = [
 	{
-		label: 'San Francisco – Oakland Bay Bridge, United States',
-		imgPath: logo,
+		label: 'Kedharnath Dham',
+		imgPath: kedarnathDham,
+		desc: `Kedarnath, possibly the most well-known and
+widely traveled dham in our itinerary.
+According to old legends, Kedarnath is the
+place where Lord Shiva granted the Pandavas
+redemption after many prayers and requests,
+upon the end of the Kurukshetra war. “Kedar” is
+one of the many other alternative names for
+Lord Shiva. Kedarnath is dedicated to Lord
+Shiva.`,
 	},
 	{
-		label: 'Bali, Indonesia',
-		imgPath: escapedmonk,
+		label: 'Kasol to Kheerganga',
+		imgPath: KasolValley,
+		desc: `Kedarnath, possibly the most well-known and
+widely traveled dham in our itinerary.
+According to old legends, Kedarnath is the
+place where Lord Shiva granted the Pandavas
+redemption after many prayers and requests,
+upon the end of the Kurukshetra war. “Kedar” is
+one of the many other alternative names for
+Lord Shiva. Kedarnath is dedicated to Lord
+Shiva.`,
+	},
+	{
+		label: 'Chotpa & Tunganath',
+		imgPath: Chopta,
+		desc: `Kedarnath, possibly the most well-known and
+widely traveled dham in our itinerary.
+According to old legends, Kedarnath is the
+place where Lord Shiva granted the Pandavas
+redemption after many prayers and requests,
+upon the end of the Kurukshetra war. “Kedar” is
+one of the many other alternative names for
+Lord Shiva. Kedarnath is dedicated to Lord
+Shiva.`,
+	},
+	{
+		label: 'Tuganath and Kedarnath',
+		imgPath: Tuganath,
+		desc: `Kedarnath, possibly the most well-known and
+widely traveled dham in our itinerary.
+According to old legends, Kedarnath is the
+place where Lord Shiva granted the Pandavas
+redemption after many prayers and requests,
+upon the end of the Kurukshetra war. “Kedar” is
+one of the many other alternative names for
+Lord Shiva. Kedarnath is dedicated to Lord
+Shiva.`,
+	},
+	{
+		label: 'Manali Solang',
+		imgPath: Solang,
+		desc: `Kedarnath, possibly the most well-known and
+widely traveled dham in our itinerary.
+According to old legends, Kedarnath is the
+place where Lord Shiva granted the Pandavas
+redemption after many prayers and requests,
+upon the end of the Kurukshetra war. “Kedar” is
+one of the many other alternative names for
+Lord Shiva. Kedarnath is dedicated to Lord
+Shiva.`,
 	},
 ];
 
-const useStyles = makeStyles((theme) => ({
-	root: {
-		maxWidth: 400,
-		flexGrow: 1,
-	},
-	header: {
-		display: 'flex',
-		alignItems: 'center',
-		height: 50,
-		paddingLeft: theme.spacing(4),
-		backgroundColor: theme.palette.background.default,
-	},
-	img: {
-		height: 150,
-		display: 'block',
-		maxWidth: 200,
-		overflow: 'hidden',
-		width: '100%',
-	},
-}));
+const useStyles = makeStyles((theme) => ({}));
 
 const TouristSpots = () => {
 	const classes = useStyles();
@@ -65,32 +107,41 @@ const TouristSpots = () => {
 	};
 
 	return (
-		<div className={classes.root}>
-			<Paper square elevation={0} className={classes.header}>
+		<div className={styles.swipe__container}>
+			<Paper square elevation={0} className={styles.swipe_header}>
 				<Typography>{tutorialSteps[activeStep].label}</Typography>
 			</Paper>
-			<AutoPlaySwipeableViews
+			{/* <AutoPlaySwipeableViews
 				axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
 				index={activeStep}
 				onChangeIndex={handleStepChange}
 				enableMouseEvents
+				className={styles.swipes}
 			>
 				{tutorialSteps.map((step, index) => (
-					<div key={step.label}>
+					<div key={step.index}>
 						<Image
-							className={classes.img}
+							className={styles.swipes__img}
 							src={step.imgPath}
 							alt={step.label}
 							loading='eager'
 						/>
 					</div>
 				))}
-			</AutoPlaySwipeableViews>
+			</AutoPlaySwipeableViews> */}
+			<Image
+				className={styles.swipes__img}
+				src={tutorialSteps[activeStep].imgPath}
+				alt={tutorialSteps[activeStep].label}
+				loading='eager'
+			/>
+			<h5 className={styles.swipes__desc}>{tutorialSteps[activeStep].desc}</h5>
 			<MobileStepper
 				steps={maxSteps}
 				position='static'
-				variant='text'
+				variant='progress'
 				activeStep={activeStep}
+				className={styles.swipe__footer}
 				nextButton={
 					<Button
 						size='small'
