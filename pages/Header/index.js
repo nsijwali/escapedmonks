@@ -16,10 +16,9 @@ export default function BackToTop(props) {
 				<Toolbar>
 					<span className={styles.header__wrapper}>
 						<Avatar
-							alt='escapedmonks'
-							src='/assets/logo.png'
 							className={styles.avatar}
-							variant='rounded'
+							alt='escapedmonks'
+							src='/assets/app-logo.svg'
 						/>
 						<h3 className={styles.header__title}>EscapedMonks</h3>
 					</span>
@@ -47,8 +46,6 @@ export default function BackToTop(props) {
 					</div>
 				</Toolbar>
 			</AppBar>
-			{/* <Toolbar id='back-to-top-anchor' /> */}
-			{/* <Box my={10} /> */}
 			<Container>
 				<Box my={2}>
 					<TouristSpots />
