@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-page-custom-font */
-import React, { useState, useEffect, useLayoutEffect } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import Head from 'next/head';
-import Container from '@material-ui/core/Container';
 import Header from './Header';
-import Footer from './Footer';
+import Footer from '../Footer';
 import styles from '../styles/Home.module.css';
 import TouristSpots from '../pages/Views/TouristSpots';
 import About from '../pages/Views/About';

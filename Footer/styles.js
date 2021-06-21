@@ -40,7 +40,7 @@ const Footerwrapper = styled.div`
 	}
 `;
 
-export default Footerwrapper;
+export { Footerwrapper };
 // @media only screen and (max-width: 600px) {
 // 	.footer_wrapper {
 // 		padding: 1rem;

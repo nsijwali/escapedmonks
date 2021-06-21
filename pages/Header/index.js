@@ -1,15 +1,11 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Avatar from '@material-ui/core/Avatar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Box from '@material-ui/core/Box';
-
 import PhoneIphone from '@material-ui/icons/PhoneIphone';
 import Email from '@material-ui/icons/Email';
+// import ScrollTop from './ScrollTop'
 import styles from '../../styles/Home.module.css';
-import TouristSpots from '../Views/TouristSpots';
-import About from '../Views/About';
 
 export default function BackToTop(props) {
 	return (
@@ -47,6 +43,5 @@ export default function BackToTop(props) {
 				</div>
 			</Toolbar>
 		</AppBar>
-		// </div>
 	);
 }
