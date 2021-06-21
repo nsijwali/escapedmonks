@@ -1,11 +1,19 @@
 /* eslint-disable @next/next/no-page-custom-font */
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import Head from 'next/head';
 import Container from '@material-ui/core/Container';
 import Header from './Header';
 import Footer from './Footer';
 import styles from '../styles/Home.module.css';
+import TouristSpots from '../pages/Views/TouristSpots';
+import About from '../pages/Views/About';
 
 export default function Home() {
+	const [showFooter, setFooter] = useState(false);
+
+	useLayoutEffect(() => {
+		setFooter(true);
+	}, []);
 	return (
 		<>
 			<Head>
@@ -17,10 +25,12 @@ export default function Home() {
 				/>
 				<link rel='icon' href='/assets/logo.png' />
 			</Head>
-			<Container fixed className={styles.container}>
+			<div className={styles.container}>
 				<Header />
-				<Footer />
-			</Container>
+				<About />
+				<TouristSpots />
+				{showFooter && <Footer />}
+			</div>
 		</>
 	);
 }

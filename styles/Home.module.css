@@ -8,6 +8,11 @@
 	height: 100vh;
 }
 
+.app_label {
+	text-align: center;
+	font-family: monospace;
+	font-size: 1.25rem;
+}
 .header {
 	background-color: #f5f5f5 !important;
 	color: #000 !important;
@@ -16,10 +21,17 @@
 	display: flex !important;
 	align-items: center !important;
 }
+.touristspots {
+	overflow-y: hidden;
+	overflow-x: scroll;
+	display: flex !important;
+}
 
 .swipe__container {
-	max-width: 80vw;
+	/* max-width: 80vw; */
 	flex-grow: 1;
+	flex-direction: row;
+	display: flex !important;
 }
 .swipe__container > div:nth-child(2) {
 	height: 50vh !important;
@@ -51,21 +63,32 @@
 	border: none !important;
 }
 .swipe_header > p {
-	font-family: cursive !important;
+	font-family: monospace !important;
 	font-size: 1.5rem;
 	text-align: center;
 	width: 100%;
 }
 
 .swipes__desc {
+	width: 60vw;
+	font-family: monospace;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+.swipes__desc > h5 {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	width: 60vw;
-	font-family: monospace;
+	width: 100%;
+}
+.swipes__desc > a {
+	color: blue;
+	display: flex;
+	min-width: 66px;
 }
 .header__title {
-	font-family: cursive;
+	font-family: monospace;
 	margin: 0;
 	font-size: 30px;
 }
@@ -92,13 +115,13 @@
 	justify-content: center;
 	align-items: center;
 	display: flex;
-	font-family: cursive;
+	font-family: monospace;
 }
 .contact > a {
 	justify-content: center;
 	align-items: center;
 	display: flex;
-	font-family: cursive;
+	font-family: monospace;
 }
 .footer {
 	width: 50%;
@@ -112,6 +135,49 @@
 }
 .MuiLinearProgress-root {
 	height: 4px !important;
+}
+
+.addData__container {
+	min-height: 100vh;
+	background: #f5f5f5;
+	display: flex !important;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.addData__container > input {
+	width: 20rem;
+	padding: 1rem;
+	margin: 4px 0;
+}
+.addData__container > textarea {
+	width: 20rem;
+	padding: 1rem;
+	margin: 4px 0;
+}
+.upload__image {
+	display: flex;
+	flex-direction: row;
+	width: 20rem;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem 0;
+}
+
+.save_btn {
+	width: 8rem;
+	padding: 10px;
+	color: #f5f5f5;
+	border-radius: 4px;
+	border: none;
+	box-shadow: 0 2.8px 2.2px rgb(0 0 0 / 3%), 0 6.7px 5.3px rgb(0 0 0 / 5%),
+		0 12.5px 10px rgb(0 0 0 / 6%), 0 22.3px 17.9px rgb(0 0 0 / 7%),
+		0 41.8px 33.4px rgb(0 0 0 / 9%), 0 100px 80px rgb(0 0 0 / 12%);
+	font-size: 1rem;
+	cursor: pointer;
+	background-color: #3f51b5;
 }
 @media only screen and (max-width: 600px) {
 	.contact {
@@ -203,18 +269,62 @@
 	margin-top: 3rem;
 }
 
+.aboutus {
+	margin-top: 50rem;
+	color: #ffffff;
+	background: transparent
+		radial-gradient(
+			closest-side at 50% 50%,
+			#383838 0%,
+			#1f1f1f 34%,
+			#000000 100%
+		)
+		0% 0% no-repeat padding-box;
+
+	scroll-behavior: smooth;
+	position: relative;
+	z-index: 0;
+	width: 100%;
+	height: 100vh;
+}
+.aboutus > div {
+	background-image: url('/assets/kedarkantha-trek-sunrise-winter-trekalone.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* opacity: 0.5; */
+}
+
+.aboutus p {
+	padding: 2rem;
+	text-align: center;
+}
+
 .card {
 	margin: 1rem;
-	padding: 1.5rem;
 	text-align: left;
 	color: inherit;
 	text-decoration: none;
 	border: 1px solid #eaeaea;
 	border-radius: 10px;
 	transition: color 0.15s ease, border-color 0.15s ease;
-	width: 45%;
+	overflow: unset !important;
+}
+.media {
+	width: 20rem;
+	height: 15rem;
 }
 
+.card_action {
+	font-size: 14px;
+	display: flex;
+	justify-content: space-between;
+}
 .card:hover,
 .card:focus,
 .card:active {

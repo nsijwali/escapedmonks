@@ -1,82 +1,73 @@
 import React from 'react';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
-import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import { Footerwrapper } from './styles';
 import Facebook from '@material-ui/icons/Facebook';
 import Instagram from '@material-ui/icons/Instagram';
 import Youtube from '@material-ui/icons/YouTube';
 import WhatsApp from '@material-ui/icons/WhatsApp';
-import styles from '../../styles/Home.module.css';
+import Copyright from '@material-ui/icons/Copyright';
 
 const Footer = () => {
-	const [value, setValue] = React.useState('recents');
-
-	const handleChange = (event, newValue) => {
-		setValue(newValue);
-	};
-
+	const getYear = new Date().getFullYear();
 	return (
-		<BottomNavigation
-			value={value}
-			onChange={handleChange}
-			className={styles.footer}
-		>
-			<BottomNavigationAction
-				label='Instagram'
-				value='instagram'
-				icon={
-					<a
-						href='https://www.instagram.com/escapedmonks/?r=nametag'
-						target='_blank'
-						without
-						rel='noreferrer'
-					>
-						<Instagram color='primary' />
-					</a>
-				}
-			/>
-			<BottomNavigationAction
-				label='Facebook'
-				value='facebook'
-				icon={
-					<a
-						href='https://www.facebook.com/Escapedmonks'
-						target='_blank'
-						without
-						rel='noreferrer'
-					>
-						<Facebook color='primary' />
-					</a>
-				}
-			/>
-			<BottomNavigationAction
-				label='Youtube'
-				value='youtube'
-				icon={
-					<a
-						href='https://youtube.com/channel/UCpJ8w5qItyelWB-Euubm0Fw'
-						target='_blank'
-						without
-						rel='noreferrer'
-					>
-						<Youtube color='primary' />
-					</a>
-				}
-			/>
-			<BottomNavigationAction
-				label='WhatsApp'
-				value='whatsApp'
-				icon={
-					<a
-						href='https://wa.me/+918882585290/'
-						target='_blank'
-						without
-						rel='noreferrer'
-					>
-						<WhatsApp color='primary' />
-					</a>
-				}
-			/>
-		</BottomNavigation>
+		<Footerwrapper>
+			<div className='foot_wrap'>
+				<section>
+					<p>About us</p>
+					<p>About us</p>
+					<p>About us</p>
+				</section>
+				<section>
+					<p>Contact Details</p>
+					<p>Contact Details</p>
+					<p>Contact Details</p>
+				</section>
+				<section>
+					<p>Privacy Policy</p>
+					<p>Privacy Policy</p>
+					<p>Privacy Policy</p>
+				</section>
+			</div>
+			<p className='followus'>
+				follow us
+				<a
+					href='https://www.instagram.com/escapedmonks/?r=nametag'
+					target='_blank'
+					without
+					rel='noreferrer'
+				>
+					<Instagram style={{ color: 'grey' }} />
+				</a>
+				<a
+					href='https://www.facebook.com/Escapedmonks'
+					target='_blank'
+					without
+					rel='noreferrer'
+				>
+					<Facebook style={{ color: 'grey' }} />
+				</a>
+				<a
+					href='https://youtube.com/channel/UCpJ8w5qItyelWB-Euubm0Fw'
+					target='_blank'
+					without
+					rel='noreferrer'
+				>
+					<Youtube style={{ color: 'grey' }} />
+				</a>
+				<a
+					href='https://wa.me/+918882585290/'
+					target='_blank'
+					without
+					rel='noreferrer'
+				>
+					<WhatsApp style={{ color: 'grey' }} />
+				</a>
+			</p>
+			<p className='copyrights'>
+				<Copyright style={{ color: 'grey' }} fontSize='small' />
+				<span>{getYear} escapedmonks</span>
+			</p>
+		</Footerwrapper>
 	);
 };
+
 export default Footer;
