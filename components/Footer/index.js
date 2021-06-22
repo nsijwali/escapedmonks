@@ -32,7 +32,7 @@ const Footer = () => {
 					<section>
 						<p>Privacy Policy</p>
 						<p>Terms & Conditions</p>
-						<p>Cancellaiton Policy</p>
+						<p>Cancellation Policy</p>
 					</section>
 				</span>
 			</div>
