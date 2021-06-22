@@ -44,7 +44,6 @@ export default function BackToTop(props) {
 					</div>
 				</Toolbar>
 			</AppBar>
-			<Toolbar id='back-to-top-anchor' />
 			<ScrollTop />
 		</>
 	);
