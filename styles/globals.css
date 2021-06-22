@@ -5,6 +5,14 @@ body {
 	scroll-behavior: smooth;
 }
 
+.MuiStepper-horizontal {
+	padding: 0 !important;
+}
+.MuiStepLabel-label {
+	color: grey !important;
+	font-family: monospace !important;
+}
+
 a {
 	color: inherit;
 	text-decoration: none;

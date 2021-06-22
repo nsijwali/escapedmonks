@@ -1,54 +1,55 @@
-import React from 'react';
+import { Button, Grid, makeStyles } from '@material-ui/core';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Zoom from '@material-ui/core/Zoom';
+import React from 'react';
 
-const useStyles = makeStyles((theme) => ({
-	root: {
+const useStyles = makeStyles(() => ({
+	wrapper: {
+		width: '40px',
+		height: '40px',
+		borderRadius: '50%',
+		background: '#2F2F2F',
 		position: 'fixed',
-		bottom: theme.spacing(2),
-		right: theme.spacing(2),
+		right: '16px',
+		bottom: '16px',
+		zIndex: 999,
 	},
 }));
 
-const ScrollTop = (props) => {
-	const { children, window } = props;
+function ScrollTop({ useNative, moveTo }) {
 	const classes = useStyles();
-	// Note that you normally won't need to set the window ref as useScrollTrigger
-	// will default to window.
-	// This is only being set here because the demo is in an iframe.
-	const trigger = useScrollTrigger({
-		target: window ? window() : undefined,
-		disableHysteresis: true,
-		threshold: 100,
-	});
 
-	const handleClick = (event) => {
-		const anchor = (event.target.ownerDocument || document).querySelector(
-			'#back-to-top-anchor',
-		);
-
-		if (anchor) {
-			anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
-		}
+	const scrollToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		});
 	};
 
 	return (
-		<Zoom in={trigger}>
-			<div onClick={handleClick} role='presentation' className={classes.root}>
-				{children}
-			</div>
-		</Zoom>
+		<Grid
+			id='scrollToTop'
+			container
+			direction='row'
+			justify='center'
+			alignItems='center'
+			className={classes.wrapper}
+		>
+			<Button onClick={scrollToTop}>
+				<ExpandLessIcon style={{ color: 'white' }} />
+			</Button>
+		</Grid>
 	);
-};
+}
 
 ScrollTop.propTypes = {
-	children: PropTypes.element.isRequired,
-	/**
-	 * Injected by the documentation to work in an iframe.
-	 * You won't need it on your project.
-	 */
-	window: PropTypes.func,
+	moveTo: PropTypes.func,
+	useNative: PropTypes.bool,
 };
+
+ScrollTop.defaultProps = {
+	moveTo: () => {},
+	useNative: false,
+};
+
 export default ScrollTop;

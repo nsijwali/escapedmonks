@@ -5,7 +5,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	/* height: 100vh; */
 }
 
 .app_label {
@@ -270,7 +270,6 @@
 }
 
 .aboutus {
-	margin-top: 50rem;
 	color: #ffffff;
 	background: transparent
 		radial-gradient(
@@ -285,7 +284,7 @@
 	position: relative;
 	z-index: 0;
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 }
 .aboutus > div {
 	background-image: url('/assets/kedarkantha-trek-sunrise-winter-trekalone.jpg');

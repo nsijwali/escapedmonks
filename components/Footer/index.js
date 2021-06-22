@@ -11,21 +11,30 @@ const Footer = () => {
 	return (
 		<Footerwrapper>
 			<div className='foot_wrap'>
-				<section>
-					<p>About us</p>
-					<p>About us</p>
-					<p>About us</p>
-				</section>
-				<section>
-					<p>Contact Details</p>
-					<p>Contact Details</p>
-					<p>Contact Details</p>
-				</section>
-				<section>
-					<p>Privacy Policy</p>
-					<p>Privacy Policy</p>
-					<p>Privacy Policy</p>
-				</section>
+				<span className='col-31'>
+					<p className='col-title'>Company</p>
+					<section>
+						<p>About us</p>
+						<p>About us</p>
+						<p>About us</p>
+					</section>
+				</span>
+				<span className='col-32'>
+					<p className='col-title'>Contact Us</p>
+					<section>
+						<p>Contact Details</p>
+						<p>Contact Details</p>
+						<p>Contact Details</p>
+					</section>
+				</span>
+				<span className='col-33'>
+					<p className='col-title'>Legal</p>
+					<section>
+						<p>Privacy Policy</p>
+						<p>Terms & Conditions</p>
+						<p>Cancellaiton Policy</p>
+					</section>
+				</span>
 			</div>
 			<p className='followus'>
 				follow us
@@ -64,7 +73,7 @@ const Footer = () => {
 			</p>
 			<p className='copyrights'>
 				<Copyright style={{ color: 'grey' }} fontSize='small' />
-				<span>{getYear} escapedmonks</span>
+				<span>{getYear} escapedmonks. All rights reserved.</span>
 			</p>
 		</Footerwrapper>
 	);

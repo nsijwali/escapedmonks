@@ -6,14 +6,22 @@ const Footerwrapper = styled.div`
 	/* background-color: rgba(255, 255, 255, 0.15); */
 	font-size: 1.125rem;
 	position: relative;
-	padding: 5rem 0;
+	padding: 5rem 1rem;
 	font-weight: 400;
 	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-
+	.col-31,
+	.col-32,
+	.col-33 {
+		text-align: center;
+	}
+	.col-title {
+		color: #333 !important;
+		font-size: 16px;
+	}
 	.copyrights {
 		font-size: 12px;
 		color: grey;
@@ -23,7 +31,8 @@ const Footerwrapper = styled.div`
 	.foot_wrap {
 		display: flex;
 		flex-direction: row;
-		justify-content: center;
+		justify-content: space-evenly;
+		width: 100%;
 	}
 	.followus {
 		display: flex;
@@ -37,12 +46,10 @@ const Footerwrapper = styled.div`
 
 	section {
 		padding: 0 1rem;
+		p {
+			font-size: 14px;
+		}
 	}
 `;
 
 export { Footerwrapper };
-// @media only screen and (max-width: 600px) {
-// 	.footer_wrapper {
-// 		padding: 1rem;
-// 	}
-// }

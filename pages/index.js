@@ -1,11 +1,14 @@
 /* eslint-disable @next/next/no-page-custom-font */
 import React, { useState, useLayoutEffect } from 'react';
+import Box from '@material-ui/core/Box';
 import Head from 'next/head';
 import Header from './Header';
-import Footer from '../Footer';
+import Footer from '../components/Footer';
 import styles from '../styles/Home.module.css';
 import TouristSpots from '../pages/Views/TouristSpots';
 import About from '../pages/Views/About';
+import Quote from '../components/RandomQuote';
+import CoolStep from '../components/CoolStepper';
 
 export default function Home() {
 	const [showFooter, setFooter] = useState(false);
@@ -27,7 +30,9 @@ export default function Home() {
 			<div className={styles.container}>
 				<Header />
 				<About />
+				{showFooter && <Quote />}
 				<TouristSpots />
+				{showFooter && <CoolStep />}
 				{showFooter && <Footer />}
 			</div>
 		</>

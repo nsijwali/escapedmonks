@@ -22,6 +22,7 @@ function AddData() {
 	const [loading, setLoading] = React.useState(false);
 	const [pdfloading, setPdfLoading] = React.useState(false);
 	const [isSaved, setSavedData] = React.useState(false);
+	const [isSavedQuote, setSavedQuote] = React.useState(false);
 	const db = app.firestore();
 	const classes = useStyles();
 	const onFileChange = async (e) => {
@@ -81,6 +82,28 @@ function AddData() {
 				setSavedData(false);
 			})
 			.catch((error) => setSavedData(false));
+	};
+
+	const onSubmitQuotes = async (e) => {
+		e.preventDefault();
+		const quote = e.target.quote.value;
+		const author = e.target.author.value || 'anonymous';
+		if (!quote) {
+			alert('type something');
+			return;
+		}
+		setSavedQuote(true);
+		await db
+			.collection('Quotes')
+			.add({
+				quote: quote,
+				author: author,
+			})
+			.then(() => {
+				document.getElementById('myQuoteform').reset();
+				setSavedQuote(false);
+			})
+			.catch((error) => setSavedQuote(false));
 	};
 	return (
 		<>
@@ -157,6 +180,31 @@ function AddData() {
 					Save Trip
 				</button>
 				{isSaved && <CircularProgress size={30} />}
+			</form>
+
+			<form
+				onSubmit={onSubmitQuotes}
+				className={styles.addData__container}
+				id='myQuoteform'
+			>
+				<h2>Add Quotes</h2>
+				<input
+					id='outlined-basic'
+					name='quote'
+					placeholder='Quote'
+					variant='outlined'
+				/>
+				<input
+					id='outlined-basic'
+					name='author'
+					placeholder='Author'
+					variant='outlined'
+				/>
+
+				<button className={styles.save_btn} disabled={isSavedQuote}>
+					Add to DB
+				</button>
+				{isSavedQuote && <CircularProgress size={30} />}
 			</form>
 		</>
 	);
