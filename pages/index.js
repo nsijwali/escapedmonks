@@ -26,7 +26,7 @@ export default function Home() {
 				<meta name='description' content={description} />
 				<meta property='og:title' content={pageTitle} key='ogtitle' />
 				<meta
-					content='travel, journey, trip, hangout, live, life, wanderer, love, hotel, monks, hotel, escape, plan'
+					content='travel, journey, trip, hangout, live, life, wanderer, love, hotel, monks, hotel, escape, plan, escapedmonks, monks'
 					name='keywords'
 				/>
 				<meta property='og:description' content={description} key='ogdesc' />
