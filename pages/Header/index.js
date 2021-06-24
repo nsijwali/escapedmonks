@@ -23,11 +23,11 @@ export default function BackToTop(props) {
 					<div className={styles.contact}>
 						<>
 							<a href='tel:+917838256011'>
-								<PhoneIphone style={{ color: 'navy' }} />
+								<PhoneIphone />
 								7838256011
 							</a>
 							<a href='tel:+918882585290'>
-								<PhoneIphone style={{ color: 'navy' }} />
+								<PhoneIphone />
 								8882585290
 							</a>
 						</>
@@ -38,7 +38,7 @@ export default function BackToTop(props) {
 							without
 							rel='noreferrer'
 						>
-							<Email style={{ color: 'navy' }} />
+							<Email />
 							escapedmonks@gmail.com
 						</a>
 					</div>

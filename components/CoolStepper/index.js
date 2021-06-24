@@ -7,10 +7,10 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Check from '@material-ui/icons/Check';
-import WorkOutline from '@material-ui/icons/WorkOutline';
-import CardTravel from '@material-ui/icons/CardTravel';
+import Fastfood from '@material-ui/icons/Fastfood';
+import Hotel from '@material-ui/icons/Hotel';
 import Repeat from '@material-ui/icons/Repeat';
-import AttachMoney from '@material-ui/icons/AttachMoney';
+import AirportShuttle from '@material-ui/icons/AirportShuttle';
 import StepConnector from '@material-ui/core/StepConnector';
 
 const useQontoStepIconStyles = makeStyles({
@@ -118,9 +118,9 @@ function ColorlibStepIcon(props) {
 	const { active, completed } = props;
 
 	const icons = {
-		1: <WorkOutline />,
-		2: <CardTravel />,
-		3: <AttachMoney />,
+		1: <Fastfood />,
+		2: <Hotel />,
+		3: <AirportShuttle />,
 		4: <Repeat />,
 	};
 
@@ -170,7 +170,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function getSteps() {
-	return ['Work', 'Tavel', 'Save', 'Repeat'];
+	return ['Eat', 'Sleep', 'Travel', 'Repeat'];
 }
 
 export default function CustomizedSteppers() {
