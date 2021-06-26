@@ -13,10 +13,11 @@ const useStyles = makeStyles(() => ({
 		right: '16px',
 		bottom: '16px',
 		zIndex: 999,
+		transition: 'all',
 	},
 }));
 
-function ScrollTop({ useNative, moveTo }) {
+const ScrollTop = () => {
 	const classes = useStyles();
 
 	const scrollToTop = () => {
@@ -40,16 +41,6 @@ function ScrollTop({ useNative, moveTo }) {
 			</Button>
 		</Grid>
 	);
-}
-
-ScrollTop.propTypes = {
-	moveTo: PropTypes.func,
-	useNative: PropTypes.bool,
-};
-
-ScrollTop.defaultProps = {
-	moveTo: () => {},
-	useNative: false,
 };
 
 export default ScrollTop;

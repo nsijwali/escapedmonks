@@ -1,6 +1,6 @@
 html,
 body {
-	font-family: monospace, Helvetica Neue, sans-serif;
+	font-family: monospace, Helvetica Neue, sans-serif !important;
 	margin: 0;
 	scroll-behavior: smooth;
 }

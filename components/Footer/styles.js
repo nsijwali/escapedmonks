@@ -13,6 +13,9 @@ const Footerwrapper = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	section {
+		cursor: pointer;
+	}
 	.col-31,
 	.col-32,
 	.col-33 {
@@ -38,8 +41,10 @@ const Footerwrapper = styled.div`
 		display: flex;
 		a {
 			padding: 0 0.25rem;
+			transition: transform 0.2s;
 			svg:hover {
 				color: #000 !important;
+				transform: scale(1.2);
 			}
 		}
 	}

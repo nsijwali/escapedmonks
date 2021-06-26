@@ -13,6 +13,7 @@ import Skeleton from '@material-ui/lab/Skeleton';
 const db = app.firestore();
 
 const TouristSpots = () => {
+	const [activeStep, setActiveStep] = useState(0);
 	const [tutorialSteps, setTutorialSteps] = useState([]);
 
 	useEffect(() => {
@@ -60,7 +61,12 @@ const TouristSpots = () => {
 								Share
 							</Button>
 							<Button size='small' color='primary'>
-								<a href={pdfUrl} target='_blank' without rel='noreferrer'>
+								<a
+									href={tutorialSteps[activeStep].pdfUrl}
+									target='_blank'
+									without
+									rel='noreferrer'
+								>
 									Learn More
 								</a>
 							</Button>
