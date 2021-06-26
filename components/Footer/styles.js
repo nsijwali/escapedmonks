@@ -6,7 +6,7 @@ const Footerwrapper = styled.div`
 	/* background-color: rgba(255, 255, 255, 0.15); */
 	font-size: 1.125rem;
 	position: relative;
-	padding: 5rem 1rem;
+	padding: 3rem 1rem;
 	font-weight: 400;
 	width: 100vw;
 	display: flex;

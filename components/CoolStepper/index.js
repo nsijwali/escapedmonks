@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
@@ -177,11 +178,25 @@ export default function CustomizedSteppers() {
 	const classes = useStyles();
 	const steps = getSteps();
 	const matches = useMediaQuery('(max-width:600px)');
+	const [counter, setCounter] = useState(-1);
+	const counterHandler = () => {
+		if (counter < 4) setCounter(counter + 1);
+		else {
+			setCounter(-1);
+		}
+	};
+	useEffect(() => {
+		const interval = setInterval(counterHandler, 1000);
+		return () => {
+			clearInterval(interval);
+		};
+	}, [counter]);
+
 	return (
 		<div className={matches ? classes.root2 : classes.root}>
 			<Stepper
 				alternativeLabel
-				activeStep={4}
+				activeStep={counter}
 				connector={<ColorlibConnector />}
 			>
 				{steps.map((label) => (

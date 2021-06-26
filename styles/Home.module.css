@@ -26,8 +26,65 @@
 	overflow-x: scroll;
 	display: flex !important;
 	padding: 1rem;
+	justify-content: center;
 }
 
+.spotTitle {
+	text-transform: capitalize;
+	font-family: monospace !important;
+	font-size: 1rem !important;
+}
+.topSunHead {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	font-size: 12px;
+	color: grey !important;
+	font-weight: 400;
+	text-transform: capitalize;
+}
+.topSunHeadLeft {
+	display: flex;
+	align-items: center;
+}
+.topSunHeadRight {
+	display: flex;
+	align-items: center;
+}
+
+.image_overlay {
+	position: relative;
+	width: 100%;
+	display: block;
+}
+.image_overlay {
+	position: relative;
+	width: 100%;
+	display: block;
+}
+.overlay {
+	display: none;
+	font-family: monospace;
+	width: 100%;
+}
+.image_overlay a:focus,
+.image_overlay a:active,
+.image_overlay:hover > .overlay {
+	display: block;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	padding: 5%;
+	background: #f5f5f5;
+	opacity: 0.6;
+	overflow: hidden;
+}
+
+.price {
+	font-size: 0.875rem !important;
+	color: grey !important;
+	font-weight: 400;
+}
 .swipe__container {
 	/* max-width: 80vw; */
 	flex-grow: 1;
@@ -288,7 +345,7 @@
 	min-height: 100vh;
 }
 .aboutus > div {
-	background-image: url('/assets/kedarkantha-trek-sunrise-winter-trekalone.jpg');
+	background-image: url('/assets/app_backgroung.jpg');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;

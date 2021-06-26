@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-page-custom-font */
 import React, { useState, useEffect, useRef } from 'react';
-import Box from '@material-ui/core/Box';
 import Head from 'next/head';
 import Header from './Header';
 import Footer from '../components/Footer';

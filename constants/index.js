@@ -1,4 +1,5 @@
 export const content = {
+	about: `ᴏғғᴇʀɪɴɢ ʙᴜᴅɢᴇᴛ sᴏʟᴏ, ɢʀᴏᴜᴘ ᴛʀɪᴘs, ᴀᴅᴠᴇɴᴛᴜʀᴇ & ᴘᴇᴀᴄᴇ Jᴏɪɴ ᴜs ғᴏʀ ɪɴsᴘɪʀᴀᴛɪᴏɴ & ɢᴇᴛ ɪɴ ᴛᴏᴜᴄʜ ᴛᴏ ᴘʟᴀɴ ʏᴏᴜʀ ᴇsᴄᴀᴘᴇ!`,
 	description:
 		'we are the monks who love travelling and have escaped from the main stream life. We help people to escape from their stressful life by offering them best packages available',
 	pageTitle: 'escapedmonks',

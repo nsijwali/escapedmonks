@@ -59,9 +59,12 @@ function AddData() {
 
 	const onSubmit = async (e) => {
 		e.preventDefault();
-		const username = e.target.label.value;
+		const label = e.target.label.value;
 		const desc = e.target.desc.value;
-		if (!username || !fileUrl) {
+		const price = e.target.price.value;
+		const duration = e.target.duration.value;
+		const destination = e.target.destination.value;
+		if (!label || !fileUrl || !price || !duration || !destination) {
 			alert('type something');
 			return;
 		}
@@ -69,7 +72,10 @@ function AddData() {
 		await db
 			.collection('packages')
 			.add({
-				label: username,
+				label: label,
+				price: price,
+				duration: duration,
+				destination: destination,
 				imgPath: fileUrl,
 				desc: desc,
 				pdfUrl: pdfUrl,
@@ -123,6 +129,25 @@ function AddData() {
 					id='outlined-basic'
 					name='label'
 					placeholder='Trip Title'
+					variant='outlined'
+				/>
+				<input
+					id='outlined-basic'
+					name='price'
+					placeholder='price'
+					variant='outlined'
+					type='number'
+				/>
+				<input
+					id='outlined-basic'
+					name='duration'
+					placeholder='duration'
+					variant='outlined'
+				/>
+				<input
+					id='outlined-basic'
+					name='destination'
+					placeholder='starting from'
 					variant='outlined'
 				/>
 				<textarea
