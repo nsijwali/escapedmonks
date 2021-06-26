@@ -241,6 +241,9 @@
 	.contact {
 		font-size: 0.75rem;
 	}
+	.touristspots {
+		justify-content: flex-start;
+	}
 	.header__wrapper {
 		flex-direction: column !important;
 		position: absolute;
