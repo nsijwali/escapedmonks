@@ -13,7 +13,7 @@ const Footerwrapper = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	section {
+	p {
 		cursor: pointer;
 	}
 	.col-31,
