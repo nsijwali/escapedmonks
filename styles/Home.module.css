@@ -29,6 +29,9 @@
 	justify-content: center;
 	scroll-snap-type: x;
 }
+.touristspots::-webkit-scrollbar {
+	display: none;
+}
 
 .spotTitle {
 	text-transform: capitalize;
