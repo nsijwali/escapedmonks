@@ -27,6 +27,7 @@
 	display: flex !important;
 	padding: 1rem;
 	justify-content: center;
+	scroll-snap-type: x;
 }
 
 .spotTitle {
@@ -374,6 +375,8 @@
 	border-radius: 10px;
 	transition: color 0.15s ease, border-color 0.15s ease, transform 2s ease;
 	overflow: unset !important;
+	scroll-snap-align: center;
+	scroll-snap-stop: normal;
 }
 
 .media {
