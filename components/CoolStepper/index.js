@@ -180,7 +180,7 @@ export default function CustomizedSteppers() {
 	const matches = useMediaQuery('(max-width:600px)');
 	const [counter, setCounter] = useState(-1);
 	const counterHandler = () => {
-		if (counter < 4) setCounter(counter + 1);
+		if (counter < 3) setCounter(counter + 1);
 		else {
 			setCounter(-1);
 		}
