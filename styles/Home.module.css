@@ -23,7 +23,7 @@
 }
 .touristspots {
 	overflow-y: hidden;
-	overflow-x: scroll;
+	overflow-x: auto;
 	display: flex !important;
 	padding: 1rem;
 	justify-content: center;
