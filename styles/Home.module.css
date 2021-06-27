@@ -290,11 +290,15 @@
 	overflow: unset !important;
 	scroll-snap-align: center;
 	scroll-snap-stop: normal;
+	border-top-right-radius: 0.5rem !important;
+	border-top-left-radius: 0.5rem !important;
 }
 
 .media {
 	width: 18rem;
 	height: 15rem;
+	border-top-right-radius: 0.5rem;
+	border-top-left-radius: 0.5rem;
 }
 
 .card_action {
