@@ -25,7 +25,7 @@ export default function WelcomeModal({ open, toggle }) {
 		setClassName('background');
 		setTimeout(() => {
 			toggle();
-		}, 3000);
+		}, 5000);
 		// handleClose;()
 	};
 
