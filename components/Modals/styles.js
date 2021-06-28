@@ -24,6 +24,7 @@ const DialogComp = styled(Dialog)`
 		justify-content: center;
 		align-items: center;
 		backdrop-filter: blur(2rem);
+		border-radius: 12px;
 	}
 	.MuiDialogContentText-root {
 		height: 100%;
