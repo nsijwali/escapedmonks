@@ -20,6 +20,8 @@ export default function ScrollDialog({ open, toggleModal, body }) {
 	return (
 		<>
 			<Dialog
+				disableBackdropClick
+				disableEscapeKeyDown
 				open={open}
 				onClose={toggleModal}
 				scroll={'paper'}

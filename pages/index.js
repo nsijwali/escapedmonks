@@ -9,9 +9,11 @@ import About from '../pages/Views/About';
 import Quote from '../components/RandomQuote';
 import CoolStep from '../components/CoolStepper';
 import ScrollTop from '../pages/Header/ScrollTop';
+import WelcomeModal from '../components/Modals/WelcomeModal';
 import { content } from '../constants';
 
 export default function Home() {
+	const [open, setOpen] = useState(true);
 	const [showFooter, setFooter] = useState(false);
 	const [scroll, setScroll] = useState(false);
 	const ref = useRef(null);
@@ -26,7 +28,9 @@ export default function Home() {
 			window.removeEventListener('scroll', handleScroll, true);
 		};
 	}, []);
-
+	const toggle = () => {
+		setOpen(!open);
+	};
 	return (
 		<>
 			<Head>
@@ -59,13 +63,18 @@ export default function Home() {
 				/>
 			</Head>
 			<div className={styles.container} ref={ref}>
-				<Header />
-				<About />
-				{showFooter && <Quote />}
-				<TouristSpots />
-				{showFooter && <CoolStep />}
-				{showFooter && <Footer />}
-				{scroll && <ScrollTop />}
+				{!open && (
+					<>
+						<Header />
+						<About />
+						{showFooter && <Quote />}
+						<TouristSpots />
+						{showFooter && <CoolStep />}
+						{showFooter && <Footer />}
+						{scroll && <ScrollTop />}{' '}
+					</>
+				)}
+				<WelcomeModal open={open} toggle={toggle} />
 			</div>
 		</>
 	);
